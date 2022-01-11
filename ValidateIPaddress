@@ -1,0 +1,20 @@
+#program to validate if the give number is a valid IP address or not
+
+def checkip(x):
+    y = x.split(".")
+    leng = len(y)
+    empty_list = []
+    if leng == 4:
+        for i in y:
+            if (int(i) > 0 and int(i) < 255):
+                print()
+            else:
+                print("not a valid ip number, print empty list", empty_list)
+                exit()
+    else:
+        print("Not a valid IP, format not correct", empty_list)
+        exit()
+    print("Valid IP")
+
+ip_add = input("Enter an IP address: ")
+checkip(ip_add)
